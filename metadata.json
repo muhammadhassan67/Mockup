@@ -1,0 +1,6 @@
+{
+  "name": "The Real Cost of Educating a Girl in Pakistan",
+  "description": "An interactive audience simulation based on an empirical study of 1,000 households across Pakistan examining the out-of-pocket costs of girls' schooling.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

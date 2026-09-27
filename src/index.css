@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: #0F172A;
+    background-color: #F8FAFC;
+    overflow-x: hidden;
+  }
+}
+
+.font-urdu {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  line-height: 2.2;
+  direction: rtl;
+  text-align: right;
+}
+
+.font-display {
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* 3D Tactile Buttons inspired by Duolingo / Behance mockup */
+.btn-3d-green {
+  background: linear-gradient(180deg, #00D680 0%, #00C274 100%);
+  box-shadow: 0 6px 0 #00875A, 0 10px 14px rgba(0, 194, 116, 0.25);
+  transition: all 0.12s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-3d-green:hover {
+  background: linear-gradient(180deg, #10E08C 0%, #00C274 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 7px 0 #00875A, 0 12px 18px rgba(0, 194, 116, 0.3);
+}
+.btn-3d-green:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #00875A, 0 4px 6px rgba(0, 194, 116, 0.2);
+}
+
+.btn-3d-white {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F0;
+  box-shadow: 0 5px 0 #CBD5E1, 0 6px 10px rgba(0, 0, 0, 0.04);
+  transition: all 0.12s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-3d-white:hover {
+  background: #F8FAFC;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 0 #CBD5E1;
+}
+.btn-3d-white:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #CBD5E1;
+}
+
+.btn-3d-danger {
+  background: linear-gradient(180deg, #F87171 0%, #EF4444 100%);
+  box-shadow: 0 6px 0 #B91C1C, 0 10px 14px rgba(239, 68, 68, 0.25);
+  transition: all 0.12s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-3d-danger:hover {
+  background: linear-gradient(180deg, #FC8181 0%, #EF4444 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 7px 0 #B91C1C;
+}
+.btn-3d-danger:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #B91C1C;
+}
+
+.btn-3d-amber {
+  background: linear-gradient(180deg, #FBBF24 0%, #F59E0B 100%);
+  box-shadow: 0 6px 0 #B45309, 0 10px 14px rgba(245, 158, 11, 0.25);
+  transition: all 0.12s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-3d-amber:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 7px 0 #B45309;
+}
+.btn-3d-amber:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #B45309;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float-subtle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(0.5deg);
+  }
+}
+
+.animate-float-subtle {
+  animation: float-subtle 3s ease-in-out infinite;
+}
+
+@keyframes tremble {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  20% {
+    transform: translate(-2px, 1px) rotate(-1deg);
+  }
+  40% {
+    transform: translate(2px, -1px) rotate(1deg);
+  }
+  60% {
+    transform: translate(-1px, 2px) rotate(0deg);
+  }
+  80% {
+    transform: translate(1px, -1px) rotate(-0.5deg);
+  }
+}
+
+.animate-tremble {
+  animation: tremble 0.35s ease-in-out infinite;
+}
+
+/* Zigzag receipt bottom edge */
+.receipt-jagged {
+  background-image: radial-gradient(circle at 10px -5px, transparent 12px, white 13px);
+  background-size: 20px 20px;
+  background-repeat: repeat-x;
+}
